@@ -1,5 +1,4 @@
 var express = require('express');
-var path = require('path');
 var app = express();
 var hindi = require('./hindi.js');
 var english = require('./english.js');
@@ -11,9 +10,6 @@ var route = express.Router();
 var schema = mongoose.Schema;
 var feedParser = require('ortoo-feedparser');
 
-app.set('views',path.join(__dirname,'views'));
-app.set('view engine','hjs');
-app.use(express.static(__dirname + '/public'));
 
 function crawl(crawlUrl){
 	var language = crawlUrl.substring(crawlUrl.match(/hl/).index+3,crawlUrl.match(/hl/).index+5);
