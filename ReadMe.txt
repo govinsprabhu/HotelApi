@@ -13,4 +13,4 @@ e - entertainment
 b - business
 s - sports
 
- 
+pg = page
