@@ -45,7 +45,7 @@ setInterval(function(){
 			crawl(url);
 		}
 	}
-},100000);
+},300000);
 
 
 
@@ -176,4 +176,19 @@ app.get('/find', function(request, response){
 		}
 	}
 });
+
+app.post('/deploy/', function (req, res) {  
+     var spawn = require('child_process').spawn,
+        deploy = spawn('sh', [ './deploy.sh' ]);
+
+    deploy.stdout.on('data', function (data) {
+        console.log(''+data);
+    });
+
+    deploy.on('close', function (code) {
+        console.log('Child process exited with code ' + code);
+    });
+    res.json(200, {message: 'Bitbucket Hook received!'})
+});
+
 module.exports = app;
