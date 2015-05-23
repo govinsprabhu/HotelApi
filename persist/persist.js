@@ -90,9 +90,8 @@ function save(crawlUrl){
 		var guid1 = article.guid.substring(index+8,article.guid.length);
 		index = article.link.match(/&url/).index;
 		var link = article.link.substring(index+5,article.link.length);
-		if(crawlUrl.match(/%3D/)){
-			crawlUrl = crawlUrl.replace('%3D','=');
-			console.log(crawlUrl);
+		if(link.match(/%3D/)){
+			link = link.replace('%3D','=');
 		}
 
 		index = article.description.match(/img/).index;
