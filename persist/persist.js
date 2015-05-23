@@ -107,7 +107,7 @@ function save(crawlUrl){
 		var feedObject = new Feed({title:article.title,url:link,guid:guid1, img:image,desc:description,pubDate:article.pubDate});
 		feedObject.save(function(err){
 			if(err){
-				//console.log("an error occurred schema");
+				console.log("an error occurred schema");
 			}else{
 				console.log("successfylly saved");
 			}

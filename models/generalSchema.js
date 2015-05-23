@@ -37,9 +37,9 @@ exports.malayalamTopSchema = mongoose.model('malayalamstop',generalSchema,'malay
 exports.tamilSportsSchema = mongoose.model('tamilsportes',generalSchema,'tamilsportes');
 exports.tamilBusinessSchema = mongoose.model('tamilbusiness',generalSchema,'tamilbusiness');
 exports.tamilIndiaSchema = mongoose.model('tamilindia',generalSchema,'tamilindia');
-exports.tamilWorldSchema = mongoose.model('tamilworldes',generalSchema,'tamilworldes');
+exports.tamilWorldSchema = mongoose.model('tamilworld',generalSchema,'tamilworld');
 exports.tamilEntertaintmentSchema = mongoose.model('tamilentertainment',generalSchema,'tamilentertainment');
-exports.tamilTopSchema = mongoose.model('tamilstop',generalSchema,'tamilstop');
+exports.tamilTopSchema = mongoose.model('tamiltop',generalSchema,'tamiltop');
 
 
 
