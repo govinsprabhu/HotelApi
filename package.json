@@ -1,0 +1,15 @@
+{
+  "name": "newsengine",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "forever start ./bin/start.js",
+    "stop": "forever stop start.js"
+  },
+  "dependencies": {
+    "express": "~4.12.2",
+    "mongoose":"*",
+    "ortoo-feedparser":"*"
+
+  }
+}
