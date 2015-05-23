@@ -79,7 +79,7 @@ exports.news = function(request,response){
 			model = 'malayalambusines';
 		}
 	}
-	mongoose.model(model).find(function(err, feed){
-				response.send(feed);
-			}).sort({_id:-1}).skip(request.query.pg*10).limit(10);
+	mongoose.model(model).find({},{},{skip:request.query.pg*10,limit:5},function(err, feed){
+		response.send(feed);
+	}).sort({_id:-1});
 };
