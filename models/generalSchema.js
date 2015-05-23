@@ -9,33 +9,33 @@ var generalSchema  = new schema({
 	pubDate:String
 });
 
-exports.hindiSportsSchema = mongoose.model('hindisportes',generalSchema);
-exports.hindiBusinessSchema = mongoose.model('hindibusines',generalSchema);
-exports.hindiIndiaSchema = mongoose.model('hindiindiaes',generalSchema);
-exports.hindiWorldSchema = mongoose.model('hindiworldes',generalSchema);
-exports.hindiEntertaintmentSchema = mongoose.model('hindientertaines',generalSchema);
-exports.hindiTopSchema = mongoose.model('hinditopes',generalSchema);
+exports.hindiSportsSchema = mongoose.model('hindisportes',generalSchema,'hindisportes');
+exports.hindiBusinessSchema = mongoose.model('hindibusiness',generalSchema,'hindibusiness');
+exports.hindiIndiaSchema = mongoose.model('hindiindia',generalSchema,'hindiindia');
+exports.hindiWorldSchema = mongoose.model('hindiworld',generalSchema,'hindiworld');
+exports.hindiEntertaintmentSchema = mongoose.model('hindientertainment',generalSchema,'hindientertainment');
+exports.hindiTopSchema = mongoose.model('hinditop',generalSchema,'hinditop');
 
-exports.englishSportsSchema = mongoose.model('englishsportes',generalSchema);
-exports.englishBusinessSchema = mongoose.model('englishbusines',generalSchema);
-exports.englishIndiaSchema = mongoose.model('englishindiaes',generalSchema);
-exports.englishWorldSchema = mongoose.model('englishworldes',generalSchema);
-exports.englishEntertainmentSchema = mongoose.model('englishentertainesses',generalSchema);
-exports.englishTopSchema = mongoose.model('englishtopes',generalSchema);
+exports.englishSportsSchema = mongoose.model('englishsportes',generalSchema,'englishsportes');
+exports.englishBusinessSchema = mongoose.model('englishbusiness',generalSchema,'englishbusiness');
+exports.englishIndiaSchema = mongoose.model('englishindia',generalSchema,'englishindia');
+exports.englishWorldSchema = mongoose.model('englishworld',generalSchema,'englishworld');
+exports.englishEntertainmentSchema = mongoose.model('englishentertainment',generalSchema,'englishentertainment');
+exports.englishTopSchema = mongoose.model('englishtop',generalSchema,'englishtop');
 
-exports.malayalamSportsSchema = mongoose.model('malayalamsportes',generalSchema);
-exports.malayalamBusinessSchema = mongoose.model('malayalambusines',generalSchema);
-exports.malayalamIndiaSchema = mongoose.model('malayalamindiaes',generalSchema);
-exports.malayalamWorldSchema = mongoose.model('malayalamworldes',generalSchema);
-exports.malayalamEntertaintmentSchema = mongoose.model('malayalamentertaines',generalSchema);
-exports.malayalamTopSchema = mongoose.model('malayalamstopes',generalSchema);
+exports.malayalamSportsSchema = mongoose.model('malayalamsportes',generalSchema,'malayalamsportes');
+exports.malayalamBusinessSchema = mongoose.model('malayalambusiness',generalSchema,'malayalambusiness');
+exports.malayalamIndiaSchema = mongoose.model('malayalamindia',generalSchema,'malayalamindia');
+exports.malayalamWorldSchema = mongoose.model('malayalamworld',generalSchema,'malayalamworld');
+exports.malayalamEntertaintmentSchema = mongoose.model('malayalamentertainment',generalSchema,'malayalamentertainment');
+exports.malayalamTopSchema = mongoose.model('malayalamstop',generalSchema,'malayalamstop');
 
-exports.tamilSportsSchema = mongoose.model('tamilsportes',generalSchema);
-exports.tamilBusinessSchema = mongoose.model('tamilbusines',generalSchema);
-exports.tamilIndiaSchema = mongoose.model('tamilindiaes',generalSchema);
-exports.tamilWorldSchema = mongoose.model('tamilworldes',generalSchema);
-exports.tamilEntertaintmentSchema = mongoose.model('tamilentertaines',generalSchema);
-exports.tamilTopSchema = mongoose.model('tamilstopes',generalSchema);
+exports.tamilSportsSchema = mongoose.model('tamilsportes',generalSchema,'tamilsportes');
+exports.tamilBusinessSchema = mongoose.model('tamilbusiness',generalSchema,'tamilbusiness');
+exports.tamilIndiaSchema = mongoose.model('tamilindia',generalSchema,'tamilindia');
+exports.tamilWorldSchema = mongoose.model('tamilworldes',generalSchema,'tamilworldes');
+exports.tamilEntertaintmentSchema = mongoose.model('tamilentertainment',generalSchema,'tamilentertainment');
+exports.tamilTopSchema = mongoose.model('tamilstop',generalSchema,'tamilstop');
 
 
 
