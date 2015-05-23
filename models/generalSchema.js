@@ -3,7 +3,11 @@ var schema = mongoose.Schema;
 var generalSchema  = new schema({
 	title:String,
 	url:String,
-	guid:String,
+	guid:{
+		type:String,
+		index:true,
+		unique:true
+	},
 	img:String,
 	desc:String,
 	pubDate:String
