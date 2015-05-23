@@ -14,3 +14,6 @@ b - business
 s - sports
 
 pg = page
+
+Automatic Deployment to Amazon Ec2 Enabled for this repo.. Any commit to master branch will be deployed to AWS.
+And you can see the live version at http://52.74.165.26:3000/
