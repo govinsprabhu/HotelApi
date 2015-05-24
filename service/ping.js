@@ -23,5 +23,5 @@ exports.ping = function(){
 				crawl(url);
 			}
 		}
-	},3000);
+	},300000);
 };
