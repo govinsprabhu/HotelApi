@@ -7,7 +7,11 @@ var generalSchema  = new schema({
 		unique:true
 	},	
 	url:String,
-	guid:String,
+	guid:{
+		type:String,
+		index:true,
+		unique:true
+	},
 	img:String,
 	desc:String,
 	pubDate:String
