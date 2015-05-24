@@ -82,6 +82,7 @@ function save(crawlUrl){
 			}else if(topic == 'h'){
 				Feed = schema.malayalamMoreSchema;
 			}else{
+				console.log("inside the top");
 				Feed = schema.malayalamTopSchema;
 			}
 
