@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+var compression = require('compression');
+app.use(compression());
 
 var ping = require('./service/ping.js');
 ping.ping();

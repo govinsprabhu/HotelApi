@@ -3,12 +3,13 @@
   "version": "0.0.3",
   "private": true,
   "scripts": {
-      "start": "forever start ./bin/start.js",
+    "start": "forever start ./bin/start.js",
     "stop": "forever stop ./bin/start.js"
   },
   "dependencies": {
+    "compression": "^1.4.4",
     "express": "~4.12.2",
-    "mongoose":"*",
-    "ortoo-feedparser":"*"
+    "mongoose": "*",
+    "ortoo-feedparser": "*"
   }
 }
