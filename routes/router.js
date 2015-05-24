@@ -34,7 +34,37 @@ exports.news = function(request,response){
 	if(request.query.topic =='b'){
 		model = model.concat('business');
 	}
+	if(request.query.topic =='h'){
+		model = model.concat('more');
+	}
+	if(model == 'malayalam' && request.query.topic == 'kl'){
+		model = model.concat('kerala');
+	}
+	if(model == 'malayalam' && request.query.topic == 'awkl'){
+		model = model.concat('arbic');
+	}
+	if(model == 'tamil' && request.query.topic == 'tn'){
+		model = model.concat('tamil');
+	}
+	if(model == 'tamil' && request.query.topic == 'sn'){
+		model = model.concat('srilanka');
+	}
+	if(model == 'english' && request.query.topic == 'm'){
+		model = model.concat('health');
+	}
+	if(model == 'english' && request.query.topic == 'tc'){
+		model = model.concat('tech');
+	}
+	if(model == 'english' && request.query.topic == 'snc'){
+		model = model.concat('science');
+	}
+	if(model == 'english' && request.query.topic == 'ir'){
+		model = model.concat('spotlight');
+	}
+
+
 	if(model.match(/notfound/) || model == 'tamil' || model == 'hindi' || model == 'english' || model == 'malayalam'){
+		console.log(model," topic ",request.query.topic);
 		response.status(404).send('404 -HTTP NOT FOUND');
 	}else{
 		mongoose.model(model).find({},{},{skip:request.query.pg*10,limit:10},function(err, feed){

@@ -33,6 +33,8 @@ function save(crawlUrl){
 				Feed = schema.hindiIndiaSchema;
 			}else if(topic == 'e'){
 				Feed = schema.hindiEntertaintmentSchema;
+			}else if(topic == 'h'){
+				Feed = schema.hindiMoreSchema;
 			}else{
 				Feed = schema.hindiTopSchema;
 			}
@@ -48,6 +50,16 @@ function save(crawlUrl){
 				Feed = schema.englishIndiaSchema;
 			}else if(topic == 'e'){
 				Feed = schema.englishEntertainmentSchema;
+			}else if(topic == 'h'){
+				Feed = schema.englishMoreSchema;
+			}else if(topic == 'm'){
+				Feed = schema.englishHealthSchema;
+			}else if(topic == 'tc'){
+				Feed = schema.englishTechSchema;
+			}else if(topic == 'snc'){
+				Feed = schema.englishScienceSchema;
+			}else if(topic == 'ir'){
+				Feed = schema.englishSpotlightSchema;
 			}else{
 				Feed = schema.englishTopSchema;
 			}
@@ -63,6 +75,12 @@ function save(crawlUrl){
 				Feed = schema.malayalamIndiaSchema;
 			}else if(topic == 'e'){
 				Feed = schema.malayalamEntertaintmentSchema;
+			}else if(topic == 'awkl'){
+				Feed = schema.malayalamArabicSchema;
+			}else if(topic == 'kl'){
+				Feed = schema.malayalamKeralaSchema;
+			}else if(topic == 'h'){
+				Feed = schema.malayalamMoreSchema;
 			}else{
 				Feed = schema.malayalamTopSchema;
 			}
@@ -79,6 +97,8 @@ function save(crawlUrl){
 				Feed = schema.tamilIndiaSchema;
 			}else if(topic == 'e'){
 				Feed = schema.tamilEntertaintmentSchema;
+			}else if(topic == 'h'){
+				Feed = schema.tamilMoreSchema;
 			}else{
 				Feed = schema.tamilTopSchema;
 			}
@@ -91,7 +111,6 @@ function save(crawlUrl){
 		index = article.link.match(/&url/).index;
 		var link = article.link.substring(index+5,article.link.length);
 		link = decodeURIComponent(link);
-
 		index = article.description.match(/img/).index;
 		lastIndex = article.description.match(/alt/).index;
 		var image = article.description.substring(index+11,lastIndex-2);
@@ -105,9 +124,9 @@ function save(crawlUrl){
 		var feedObject = new Feed({title:article.title,url:link,guid:guid1, img:image,desc:description,pubDate:article.pubDate});
 		feedObject.save(function(err){
 			if(err){
-				console.log("an error occurred schema");
+	//			console.log("an error occurred schema");
 			}else{
-				console.log("successfylly saved");
+	//			console.log("successfylly saved");
 			}
 		});
 	});
