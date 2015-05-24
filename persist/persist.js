@@ -4,7 +4,7 @@ var feedParser = require('ortoo-feedparser');
 var schema = require('../models/generalSchema.js');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/myapp', function(err,db){
+mongoose.connect('mongodb://localhost/news', function(err,db){
 	if(!err){
 		console.log("Successfully connected");
 	}else{
