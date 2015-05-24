@@ -1,13 +1,13 @@
 var mongoose = require("mongoose");
 var schema = mongoose.Schema;
 var generalSchema  = new schema({
-	title:String,
-	url:String,
-	guid:{
+	title:{
 		type:String,
 		index:true,
 		unique:true
-	},
+	},	
+	url:String,
+	guid:String,
 	img:String,
 	desc:String,
 	pubDate:String

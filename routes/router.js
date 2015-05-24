@@ -34,7 +34,7 @@ exports.news = function(request,response){
 	if(request.query.topic =='b'){
 		model = model.concat('business');
 	}
-	if(model.match(/notfound/)){
+	if(model.match(/notfound/) || model == 'tamil' || model == 'hindi' || model == 'english' || model == 'malayalam'){
 		response.status(404).send('404 -HTTP NOT FOUND');
 	}else{
 		mongoose.model(model).find({},{},{skip:request.query.pg*10,limit:10},function(err, feed){
