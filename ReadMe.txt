@@ -6,13 +6,22 @@
 4.Test using http://localhost:3000/find?ln=en&topic=w&pg=0
 ln =language
  {en,hi,ml,ta}
-topic ={ w,n,e,b,s}
-w -world
-n -india
+topic ={'','s','b','n','w','e','h','kl','awkl','tn','sn','tc','snc','m','ir'}
+''-with no topic, gives top stories
+w - world
+n - india
 e - entertainment
 b - business
 s - sports
-
+h - more top stories
+kl - Kerala news, only with malayalam
+awkl- Gulf news, only with malayalam
+tn - Tamilnadu news, only with tamil
+sn - Srilankan news, only with tamil
+tc - tech news, only with english
+snc- science news, only with english
+m - helth news, only with english
+ir -spotlight, only with english
 pg = page
 
 Automatic Deployment to Amazon Ec2 Enabled for this repo.. Any commit to master branch will be deployed to AWS.
