@@ -99,6 +99,10 @@ function save(crawlUrl){
 				Feed = schema.tamilEntertaintmentSchema;
 			}else if(topic == 'h'){
 				Feed = schema.tamilMoreSchema;
+			}else if(topic == 'tn'){
+				Feed = schema.tamilTamilSchema;
+			}else if(topic == 'sn'){
+				Feed = schema.tamilSrilankaSchema;
 			}else{
 				Feed = schema.tamilTopSchema;
 			}
@@ -109,11 +113,11 @@ function save(crawlUrl){
 		var index = article.guid.match(/cluster/).index;
 		var guid1 = article.guid.substring(index+8,article.guid.length);
 		index = article.link.match(/&url/).index;
-		var link = 'http://'.concat(article.link.substring(index+5,article.link.length));
+		var link = article.link.substring(index+5,article.link.length);
 		link = decodeURIComponent(link);
 		index = article.description.match(/img/).index;
 		lastIndex = article.description.match(/alt/).index;
-		var image = article.description.substring(index+11,lastIndex-2);
+		var image = 'http://'.concat(article.description.substring(index+11,lastIndex-2));
 		index = article.description.match(/<\/b><\/font><br><font size="-1">/).index;
 		var description = "";
 		if(article.description.match(/...<\/font><br><font size="-1"><a/)){
