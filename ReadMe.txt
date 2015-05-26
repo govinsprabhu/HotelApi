@@ -28,3 +28,4 @@ Automatic Deployment to Amazon Ec2 Enabled for this repo.. Any commit to master 
 And you can see the live version at 
 Elastic IP
 http://52.74.222.16:3000/find?ln=en&topic=n&pg=0
+http://dev-news-engine.indimakes.com:3000/find?ln=en&topic=n&pg=0
