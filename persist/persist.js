@@ -113,7 +113,11 @@ function save(crawlUrl){
 
 		var index = article.guid.match(/cluster/).index;
 		var guid1 = article.guid.substring(index+8,article.guid.length);
+		if(guid1.match(/http:/)){
+			return;
+		}
 		index = article.link.match(/&url/).index;
+
 		var link = article.link.substring(index+5,article.link.length);
 		link = decodeURIComponent(link);
 		index = article.description.match(/img/).index;
