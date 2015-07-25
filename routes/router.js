@@ -1,8 +1,18 @@
+var express = require("express");
+var schema = require('../models/mygola.js');
 var mongoose = require('mongoose');
-var express = require('express');
 
-exports.news = function(request,response){
-	var model = ''; 
+mongoose.connect('mongodb://localhost/mygola', function(err,db){
+	if(!err){
+		console.log("Successfully connected");
+	}else{
+		console.log("Unable to connect");
+		console.log(err);
+	}
+});
+
+exports.places = function(request,response){
+/*	var model = ''; 
 	if(request.query.ln == 'hi'){
 		model = 'hindi';
 		
@@ -70,5 +80,12 @@ exports.news = function(request,response){
 		mongoose.model(model).find({},{},{skip:request.query.pg*10,limit:10},function(err, feed){
 			response.send(feed);
 		}).sort({_id:-1});
-	}
+	}*/
+	console.log("returning places collection");
+	mongoose.model("places").find(function(err, feed){
+			response.send(feed);
+
+	}).sort({_id:-1});
+	
+
 };
